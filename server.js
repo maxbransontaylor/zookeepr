@@ -92,6 +92,9 @@ app.post("/api/animals", (req, res) => {
     res.json(req.body);
   }
 });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/index.htiml"));
+});
 app.listen(PORT, () => {
   console.log(`API Server now on port ${PORT}`);
 });
